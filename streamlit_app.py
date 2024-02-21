@@ -47,7 +47,7 @@ streamlit.dataframe(my_data_rows)
 #Second entry box
 fruit_add = streamlit.text_input('What fruit would you like to add?','Jackfruit')
 fruit_add_str = str(fruit_add)
-my_cur.execute("INSERT INTO fruit_load_list ('FRUIT_NAME') VALUES (%s)", (fruit_add_str,))
+my_cur.execute("INSERT INTO fruit_load_list (FRUIT_NAME) VALUES (%s)", (fruit_add_str,))
 streamlit.write('Thanks for adding ', fruit_choice)
 
 
